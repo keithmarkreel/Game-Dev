@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://b1f4rhl1npngw"]
 
 [node name="Node3D" type="Node3D" unique_id=1810259031]
+transform = Transform3D(1, 0, 0, 0, -0.5120578, -0.85895103, 0, 0.85895103, -0.5120578, 0, 0, 0)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=907692684]
+transform = Transform3D(-0.99868476, 0.00921016, -0.05043548, 0.039635725, -0.4852837, -0.87345797, -0.032520078, -0.87430906, 0.4842807, -0.036541775, -0.13183667, -0.3220763)
+text = "Hello World"
