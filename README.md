@@ -5,7 +5,7 @@
 
 ![3D Screenshot](3DScreenshot.png)
 
-# Week 2: Actiity 1 (Player movement)
+# Week 2: Activity 1 (Player movement)
 1. Gameplay Mechanics
 Handling input (keyboard/gamepad)
 physics bodies (rigid/kinematic)
