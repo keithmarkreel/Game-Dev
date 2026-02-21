@@ -190,12 +190,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n7ghd")
 }, {
-"duration": 1.0,
+"duration": 2.5,
 "texture": SubResource("AtlasTexture_nvl01")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 9.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -260,9 +260,8 @@ script = ExtResource("1_onrkg")
 position = Vector2(-1, -25.000002)
 scale = Vector2(1.9375, 1.75)
 sprite_frames = SubResource("SpriteFrames_2hs0m")
-animation = &"dash"
+animation = &"jump"
 autoplay = "Idle"
-frame_progress = 0.28162497
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1850589871]
 position = Vector2(-1, -14)

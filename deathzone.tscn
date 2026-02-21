@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://brfo1n566wa61"]
+
+[ext_resource type="Script" uid="uid://byp6dn5r2s21u" path="res://area_2d.gd" id="1_nb3mx"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_06h6m"]
+
+[node name="deathzone" type="Area2D" unique_id=1225722430]
+script = ExtResource("1_nb3mx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1111689927]
+shape = SubResource("WorldBoundaryShape2D_06h6m")
+
+[node name="Timer" type="Timer" parent="." unique_id=1866094676]
