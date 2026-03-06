@@ -1,7 +1,3 @@
-Certainly! Here is a polished and professional version of your README. I’ve added clear hierarchies, icons, and a more structured layout to make it easier to navigate.
-
----
-
 # 🎮 Game Development Activity Log
 
 A structured repository tracking the progress, subtopics, and exercises for my game development journey.
@@ -64,8 +60,3 @@ Expanding the world with intelligent entities and a functional User Interface.
 
 ---
 
-### **How to Use This Repo**
-
-1. **Clone** the repository.
-2. Navigate to the specific week's folder to view the source code.
-3. Check the **Links** section in each week for the specific tutorials followed.
