@@ -18,6 +18,7 @@ var max_health = 5
 var current_health = 5
   # Path to your ProgressBar with damage bar
 @onready var health_bar: ProgressBar = $UI/Healthbar
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -49,7 +50,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_dashing:
 		velocity.y = JUMP_VELOCITY
-
+		audio_stream_player_2d.play()
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction > 0:
 		animated_sprite.flip_h = false
