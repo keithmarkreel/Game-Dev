@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dylv62x4hjbx2"]
+
+[ext_resource type="Script" uid="uid://dff2ywvcotfxk" path="res://scripts/healthbar.gd" id="1_qx7qh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q7o5i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fw7bc"]
+
+[node name="Healthbar" type="ProgressBar" unique_id=2056380976]
+z_index = 1
+offset_right = 240.0
+offset_bottom = 10.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_q7o5i")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fw7bc")
+value = 60.0
+show_percentage = false
+script = ExtResource("1_qx7qh")
+
+[node name="Damagebar" type="ProgressBar" parent="." unique_id=1498431518]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 80.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="." unique_id=444719927]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
