@@ -8,9 +8,31 @@ const DASH_SPEED = 600.0
 const DASH_DURATION = 0.2
 var is_dashing = false
 
+# Death Variables
+const DEATH_UPWARD_FORCE = -800  # Strong pop-up
+const DEATH_GRAVITY = 900
+var is_dead = false
+
 @onready var animated_sprite = $AnimatedSprite2D
 
+
 func _physics_process(delta: float) -> void:
+	
+	# -----------------
+	# DEATH STATE
+	# -----------------
+	if is_dead:
+		# Player flies up, spins, and falls off map
+		velocity.y += DEATH_GRAVITY * delta
+		rotation += 5 * delta
+		move_and_slide()
+		return
+	
+	
+	# -----------------
+	# NORMAL MOVEMENT
+	# -----------------
+
 	# 1. Add gravity (Disabled while dashing for a "clean" dash)
 	if not is_on_floor() and not is_dashing:
 		velocity += get_gravity() * delta
@@ -45,7 +67,6 @@ func _physics_process(delta: float) -> void:
 
 	# 6. Handle Movement
 	if is_dashing:
-		# Keep moving in the direction we were facing
 		velocity.x = (-DASH_SPEED if animated_sprite.flip_h else DASH_SPEED)
 	elif direction:
 		velocity.x = direction * SPEED
@@ -54,9 +75,34 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-# This helper function handles the dash timer
+
+# -----------------
+# DASH FUNCTION
+# -----------------
 func start_dash():
 	is_dashing = true
-	# Create a quick timer to stop the dash
 	await get_tree().create_timer(DASH_DURATION).timeout
 	is_dashing = false
+
+
+# -----------------
+# PLAYER DEATH
+# -----------------
+func die():
+
+	if is_dead:
+		return
+
+	is_dead = true
+	is_dashing = false
+
+	# Strong upward knock
+	velocity = Vector2(0, DEATH_UPWARD_FORCE)
+
+	# Play death animation if you have one
+	if animated_sprite.sprite_frames.has_animation("death"):
+		animated_sprite.play("death")
+
+	# Fade out effect
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 1.5)
