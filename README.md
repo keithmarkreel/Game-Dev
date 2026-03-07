@@ -59,4 +59,7 @@ Expanding the world with intelligent entities and a functional User Interface.
 * [Watch: AI and UI Implementation](https://youtu.be/0uvato0BhE4)
 
 ---
+## 📅 Week 4: Export
+
+![Alt text](APKscreenshot.png)
 
