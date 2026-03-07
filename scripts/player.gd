@@ -19,6 +19,8 @@ var current_health = 5
   # Path to your ProgressBar with damage bar
 @onready var health_bar: ProgressBar = $UI/Healthbar
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $AudioStreamPlayer2D2
+@onready var audio_stream_player_2d_3: AudioStreamPlayer2D = $AudioStreamPlayer2D3
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -47,6 +49,8 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("move_shift") and not is_dashing:
 		start_dash()
+		audio_stream_player_2d_2.play()
+		
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not is_dashing:
 		velocity.y = JUMP_VELOCITY
@@ -91,6 +95,7 @@ func start_dash():
 # -----------------
 func die():
 	if is_dead:
+		audio_stream_player_2d_3.play()
 		return
 
 	is_dead = true
@@ -99,7 +104,7 @@ func die():
 
 	if animated_sprite.sprite_frames.has_animation("death"):
 		animated_sprite.play("death")
-
+		
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, 1.5)
 
