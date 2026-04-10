@@ -15,6 +15,14 @@ run/main_scene="uid://c62dpqwu0usuj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Network="*uid://de4imo1mlmqkt"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_colyseus/plugin.cfg")
+
 [input]
 
 move_left={

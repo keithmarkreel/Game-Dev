@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqdtpgl4gh453"
-path="res://.godot/imported/APK screenshot.png-7f7ff07b1042cd07a794ae53ed6826c0.ctex"
+uid="uid://jngfvh5o3yqq"
+path="res://.godot/imported/blur.png-4563c8475376415b661c69b2b9f1d2d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://APK screenshot.png"
-dest_files=["res://.godot/imported/APK screenshot.png-7f7ff07b1042cd07a794ae53ed6826c0.ctex"]
+source_file="res://addons/godot_colyseus/demo/blur.png"
+dest_files=["res://.godot/imported/blur.png-4563c8475376415b661c69b2b9f1d2d4.ctex"]
 
 [params]
 
