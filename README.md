@@ -63,7 +63,16 @@ Expanding the world with intelligent entities and a functional User Interface.
 * [Watch: AI and UI Implementation](https://youtu.be/0uvato0BhE4)
 
 ---
-## 📅 Week 4: Export
+## 📅 Week 4: Export and Multiplayer
 
 ![Alt text](APKscreenshot.png)
+
+## Colyseus Multiplayer
+
+![Alt text](Multiplayer.png)
+
+## Logs
+
+![Alt text](Logfile.png)
+
 
