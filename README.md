@@ -3,6 +3,10 @@
 A structured repository tracking the progress, subtopics, and exercises for my game development journey.
 
 ---
+## 📅 Week 1: Hello World!
+
+![Alt text](HelloWorld.png)
+
 
 ## 📅 Week 2: Gameplay Mechanics
 
