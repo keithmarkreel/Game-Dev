@@ -29,4 +29,4 @@ const CollectionSchema = collections.CollectionSchema
 
 const RoomInfo = preload("res://addons/godot_colyseus/lib/room_info.gd")
 
-const Promise = preload("res://addons/godot_colyseus/lib/promises.gd").Promise
+const Promise = preload("res://addons/godot_colyseus/lib/promises.gd")

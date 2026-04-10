@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cbc4kea73g1v2" path="res://assets/map3/Free Pixel Art Forest/PNG/Background layers/Layer_0005_5.png" id="1_gwceb"]
 [ext_resource type="PackedScene" uid="uid://dl8twosmutm1a" path="res://platform.tscn" id="1_n46q3"]
 [ext_resource type="Texture2D" uid="uid://g8ifn8hx2mm6" path="res://assets/map3/Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" id="2_08mmt"]
-[ext_resource type="PackedScene" uid="uid://d0t3nukav7wmw" path="res://player.tscn" id="2_btoec"]
+[ext_resource type="PackedScene" uid="uid://d0t3nukav7wmw" path="res://Player.tscn" id="2_btoec"]
 [ext_resource type="PackedScene" uid="uid://bh3nu2urujget" path="res://next_level.tscn" id="5_3sk1a"]
 [ext_resource type="PackedScene" uid="uid://bclmimga1hc37" path="res://Slime_enemy.tscn" id="6_btoec"]
 [ext_resource type="Texture2D" uid="uid://dio5bctlymc2d" path="res://assets/map2/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="7_08mmt"]

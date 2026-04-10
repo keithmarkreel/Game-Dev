@@ -161,6 +161,7 @@ func _on_frame():
 		WebSocketPeer.STATE_CLOSED:
 			var code = ws.get_close_code()
 			var reason = ws.get_close_reason()
+			print("WebSocket closed! code=", code, " reason='", reason, "' has_joined=", _has_joined)
 			_connection_closed(true)
 			if _has_joined:
 				leave()

@@ -104,16 +104,22 @@ func _setup_field(field: Field):
 	var type = field.current_type
 	match type.type:
 		Types.MAP:
-			assert(type.sub_type != null) #,"Schema type is requested")
+			assert(type.sub_type != null)
+			var map = col.MapSchema.new()
+			map.sub_type = type.sub_type
+			field.value = map
+			_refs[_fields.find(field) + 1] = Ref.new(map, type)
 		Types.ARRAY:
-			assert(type.sub_type != null) #,"Schema type is requested")
-			field.value = col.Collection.new()
+			assert(type.sub_type != null)
+			field.value = col.ArraySchema.new()
 		Types.SET:
-			assert(type.sub_type != null) #,"Schema type is requested")
+			assert(type.sub_type != null)
+			field.value = col.SetSchema.new()
 		Types.COLLECTION:
-			assert(type.sub_type != null) #,"Schema type is requested")
+			assert(type.sub_type != null)
+			field.value = col.CollectionSchema.new()
 		Types.REF:
-			assert(type.sub_type != null) #,"Schema type is requested")
+			assert(type.sub_type != null)
 		Types.NUMBER, Types.FLOAT32, Types.FLOAT64:
 			field.value = 0.0
 		Types.INT8, Types.UINT8, Types.INT16, Types.UINT16, Types.INT32, Types.UINT32, Types.INT64, Types.UINT64:
